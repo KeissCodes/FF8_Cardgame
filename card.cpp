@@ -5,11 +5,7 @@
 
 static cairo_surface_t* createScaledCairoImage(const std::string& path, int width, int height) {
     cairo_surface_t* image_surface = cairo_image_surface_create_from_png(path.c_str());
-    
-    if (cairo_surface_status(image_surface) != CAIRO_STATUS_SUCCESS) {
-        return nullptr;
-    }
-    
+
     cairo_surface_t* scaled_surface = cairo_surface_create_similar(
         image_surface, CAIRO_CONTENT_COLOR_ALPHA, width, height);
     
@@ -29,9 +25,6 @@ static cairo_surface_t* createScaledCairoImage(const std::string& path, int widt
 Card::Card(const std::string &name, int up, int right, int down, int left, const std::string &element, int rarity, const std::string &img_path)
     : _name(name), _up(up), _right(right), _down(down), _left(left), _element(element), _rarity(rarity), _img_path(img_path) {
     _image = createScaledCairoImage(_img_path.c_str(), CARD_SIZE, CARD_SIZE);
-    if (cairo_surface_status(_image) != CAIRO_STATUS_SUCCESS) {
-        std::cerr << "Failed to load image: " << _img_path << std::endl;
-    }
 }
 
 Card::~Card() {

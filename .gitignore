@@ -73,3 +73,6 @@ ENV/
 
 # Specific to this project
 triple_triad
+
+/build/
+!build/triple_triad

@@ -13,9 +13,6 @@ Board::Board(int xPos, int yPos, Player* playerA, Player* playerB ) : _xPos(xPos
     }
 
     _image = cairo_image_surface_create_from_png("img/background.png");
-    if (cairo_surface_status(_image) != CAIRO_STATUS_SUCCESS) {
-        std::cerr << "Failed to load image: " << std::endl;
-    }
 }
 
 void Board::draw(cairo_t *cr)
