@@ -1,0 +1,54 @@
+{
+  "configurations": [
+      {
+          "name": "Linux-Debug",
+          "generator": "Ninja",
+          "configurationType": "Debug",
+          "buildRoot": "${projectDir}/build/${name}",
+          "installRoot": "${projectDir}/out/install/${name}",
+          "cmakeCommandArgs": "",
+          "buildCommandArgs": "-v",
+          "ctestCommandArgs": "",
+          "inheritEnvironments": [ "linux-gcc-x64" ],
+          "variables": [
+              {
+                  "name": "CMAKE_CXX_STANDARD",
+                  "value": "17"
+              },
+              {
+                  "name": "CMAKE_BUILD_TYPE",
+                  "value": "Debug"
+              },
+              {
+                  "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
+                  "value": "YES"
+              }
+          ]
+      },
+      {
+          "name": "Linux-Release",
+          "generator": "Ninja",
+          "configurationType": "Release",
+          "buildRoot": "${projectDir}/build/${name}",
+          "installRoot": "${projectDir}/out/install/${name}",
+          "cmakeCommandArgs": "",
+          "buildCommandArgs": "-v",
+          "ctestCommandArgs": "",
+          "inheritEnvironments": [ "linux-gcc-x64" ],
+          "variables": [
+              {
+                  "name": "CMAKE_CXX_STANDARD",
+                  "value": "17"
+              },
+              {
+                  "name": "CMAKE_BUILD_TYPE",
+                  "value": "Release"
+              },
+              {
+                  "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
+                  "value": "YES"
+              }
+          ]
+      }
+  ]
+}

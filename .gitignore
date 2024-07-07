@@ -1,0 +1,75 @@
+# Prerequisites
+*.d
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.obj
+*.pyc
+*.pyo
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# Build directories
+/build/
+out/
+Debug/
+Release/
+
+# Generated files
+*.moc
+*.qrc
+*.ui
+*.rcc
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# VSCode files
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+*.old
+*.orig
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.xz
+*.bz2
+
+# Python virtual environment
+venv/
+ENV/
+
+# Specific to this project
+triple_triad
