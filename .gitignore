@@ -23,7 +23,6 @@ install_manifest.txt
 compile_commands.json
 
 # Build directories
-/build/
 out/
 Debug/
 Release/
@@ -70,9 +69,6 @@ Thumbs.db
 # Python virtual environment
 venv/
 ENV/
-
-# Specific to this project
-triple_triad
 
 /build/
 !build/triple_triad
